@@ -9,7 +9,7 @@ def handler(event, context):
 
   params = {
     'id': '8476', # modify with each invoke so the id does not repeat
-    'lastDone': 'This is my content' # modify content here
+    'lastDone': 'This is my content', # modify content here
     'streakLength':''
   }
 

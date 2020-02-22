@@ -17,7 +17,7 @@ def handler(event, context):
 
   params = {
     'id': '8476', # we only have one user for development
-    'lastDone': '02/21/2020, 10:38:00', # a random time from yesterday
+    'lastDone': '02/21/2020, 10:38:00', # a random time from yesterday "%m/%d/%Y, %H:%M:%S"
     'streakLength': '32' # random number for development
   }
 

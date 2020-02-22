@@ -1,6 +1,6 @@
 # Habit@ Application
 
-This application will create a serverless AWS Lambda application and a AWS DynamoDB that will be used to keep track of users records.   
+This application will create a serverless AWS Lambda application and a AWS DynamoDB that will be used to keep track of a users record for completing a task that they wish to track.   
 
 
 ```

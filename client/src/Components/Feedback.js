@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 
 class Feedback extends Component {
 
-    
 
     render(){
 
@@ -11,7 +10,8 @@ class Feedback extends Component {
     return(
 
             <div className='success'>
-                <p>YOU DID THE THING!</p>
+                <h1>YOU DID THE THING!</h1>
+                    <p>{this.props.streak + ` times!`}</p>
             </div>
     )
 }

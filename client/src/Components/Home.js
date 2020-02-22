@@ -9,7 +9,7 @@ class Home extends Component {
 
         return(
             <div className="buttons">
-                    <NavLink to='/feedback' className="btn-hover color-8">Do the Thing!</NavLink>
+                    <NavLink to='/feedback' className="btn-hover color-8">Did the Thing!</NavLink>
             </div>
         )
     }

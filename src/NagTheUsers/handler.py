@@ -15,17 +15,19 @@ def lambda_handler(event, context):
 
     string_format = "%m/%d/%Y, %H:%M:%S"
     now = datetime.now()
+    nagCount = 0
 
     for user in the_big_wad['Items']:
         last_done = datetime.strptime(user['lastDone'], string_format)
         delta = now - last_done
         print(delta.days)
         if delta.days > 1:
+            nagCount += 1
             # todo: add notification code
 
     response = {
         'statusCode': 200,
-        'body': '[memento voice]: I did it'
+        'body': 'number of users nagged: '+str(nagCount)
     }
 
     return response

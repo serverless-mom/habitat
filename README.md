@@ -1,14 +1,11 @@
-# Stackery Blank SAM Template
+# Habit@: the habit tracker
 
-This is a sample template for a serverless AWS Lambda application.
+This project uses the following frameworks
+* AWS Lambda
+* Amazon SNS
+* Amazon DynamoDB
+* Amazon API Gateway
+* Amazon Cloudwatch Events
 
-Here is an overview of the files:
+A CloudFormation template is in the main directory.
 
-```text
-.
-├── deployHooks/                       <-- Directory for storing deployment hooks
-├── .gitignore                         <-- Gitignore for Stackery
-├── .stackery-config.yaml              <-- Default CLI parameters for root directory
-├── README.md                          <-- This README file
-└── template.yaml                      <-- SAM infrastructure-as-code template
-```

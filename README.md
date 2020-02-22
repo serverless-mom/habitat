@@ -1,10 +1,9 @@
-# Stackery Blank SAM Template
+# Habit@ Application
 
-This is a sample template for a serverless AWS Lambda application.
+This application will create a serverless AWS Lambda application and a AWS DynamoDB that will be used to keep track of users records.   
 
-Here is an overview of the files:
 
-```text
+```
 .
 ├── deployHooks/                       <-- Directory for storing deployment hooks
 ├── .gitignore                         <-- Gitignore for Stackery

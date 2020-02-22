@@ -12,9 +12,6 @@ def lambda_handler(event, context):
     table = dynamodb.Table(table_name)
 
     the_big_wad = table.scan()
-    get_user = the_big_wad['Items'][0]
-
-    # get_user = table.get_item({'id': user_id})
 
     string_format = "%m/%d/%Y, %H:%M:%S"
     now = datetime.now()

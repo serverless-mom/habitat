@@ -37,9 +37,9 @@ streakLengthQuery = () => {
         streakLength: response.streakLength
       });
     })
-    .catch (error) {
-      console.log('Error fetching the streak data');
-    }
+    .catch (error => {
+      console.log('Error fetching the streak data', error);
+    });
 }
 
 

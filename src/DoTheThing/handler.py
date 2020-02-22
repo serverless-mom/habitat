@@ -1,7 +1,7 @@
 import os
 import boto3
 
-import datetime from datetime
+from datetime import datetime
 
 
 dynamodb = boto3.resource('dynamodb')

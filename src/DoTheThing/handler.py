@@ -1,5 +1,9 @@
 import os
 import boto3
+
+import datetime from datetime
+
+
 dynamodb = boto3.resource('dynamodb')
 def handler(event, context):
     table_name = os.environ['TABLE_NAME'] # get the table name from the automatically populated environment variables
@@ -8,6 +12,9 @@ def handler(event, context):
     user_id = '8476'
     get_user = table.get_item(Key={'id': user_id})
 
+    string_format = "%m/%d/%Y, %H:%M:%S"
+    now = datetime.now()
+    last_done = now.strftime(string_format)
 
     streak = get_user['streakLength']
     streak += 1
@@ -20,7 +27,7 @@ def handler(event, context):
 
     params = {
         'id': '8476',
-        'lastDone': '02/21/2020, 10:38:00', 
+        'lastDone': last_done, 
         'streakLength': streak
     }
     

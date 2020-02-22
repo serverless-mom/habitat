@@ -23,31 +23,20 @@ def lambda_handler(event, context):
 
     streak = get_user['streakLength']
     streak += 1
-    
-    # result = {
-    # 'id': '8476', # we only have one user for development
-    # 'lastDone': '02/21/2020, 10:38:00', # a random time from yesterday
-    # 'streakLength': '32' # random number for development
-    # }
 
-    params = {
-        'id': '8476',
-        'lastDone': last_done, 
-        'streakLength': streak
-    }
+    key = {'id': user_id}
     
-    # add one to streakLength
-    # create new params object that has the new streak length and a date time of right now
-    # do this:
-    table.update_item(Item = params) 
-
-    # #do that:
+    table.update_item(Key=key,
+                        UpdateExpression="SET lastDone = :updated",                   
+                        ExpressionAttributeValues={':updated': last_done}
+                        ) 
+    table.update_item(Key=key,
+                        UpdateExpression="SET streakLength = :updated",                   
+                        ExpressionAttributeValues={':updated': streak}
+                        ) 
     response = {
         'statusCode': 200,
-        'body': '300'
+        'body': streak
     }
-
-    #done!
-    
     return response
 

@@ -5,19 +5,25 @@ def handler(event, context):
   table_name = os.environ['TABLE_NAME'] # get the table name from the automatically populated environment variables
   table = dynamodb.Table(table_name)
 
-  result = table.scan()
-  result_count = result['Count']
-  items = result['Items']
+  result = {
+    'id': '8476', # we only have one user for development
+    'lastDone': '02/21/2020, 10:38:00', # a random time from yesterday
+    'streakLength': '32' # random number for development
+  }
 
-    # for item in items:
-    #     item_id = item['id']
-    #     print(f'Item {item_id}')
+  # add one to streakLength
+  # create new params object that has the new streak length and a date time of right now
+  # do this:
+    table.update_item(Item = params) # do not overwrite existing entries
 
-#   Return a 200 response if no errors
+
+#do that:
   response = {
     'statusCode': 200,
-    'body': 'Success! I promise to put something here soon'
+    'body': 'this should be a new streak length'
   }
+
+  #done!
   
   return response
 

@@ -5,12 +5,17 @@ from datetime import datetime
 
 
 dynamodb = boto3.resource('dynamodb')
-def handler(event, context):
-    table_name = os.environ['TABLE_NAME'] # get the table name from the automatically populated environment variables
+def lambda_handler(event, context):
+    table_name = 'tasks'
     table = dynamodb.Table(table_name)
 
     user_id = '8476'
-    get_user = table.get_item(Key={'id': user_id})
+
+    the_big_wad = table.scan()
+    get_user = the_big_wad['Items'][0]
+    print(get_user)
+
+    # get_user = table.get_item({'id': user_id})
 
     string_format = "%m/%d/%Y, %H:%M:%S"
     now = datetime.now()
@@ -36,10 +41,10 @@ def handler(event, context):
     # do this:
     table.update_item(Item = params) 
 
-    #do that:
+    # #do that:
     response = {
         'statusCode': 200,
-        'body': streak
+        'body': '300'
     }
 
     #done!

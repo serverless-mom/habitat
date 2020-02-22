@@ -1,3 +1,5 @@
+@import "normalize.css"; /* bring in normalize.css styles */
+
 .App {
   text-align: center;
 }
@@ -51,7 +53,7 @@ html {
 .header {
 
   height: 100px;
-  background-image: linear-gradient(to right, #29323c85, #48556376);
+  background-image: linear-gradient(to right, #29323c30, #4855632c);
   color: black;
 
 }

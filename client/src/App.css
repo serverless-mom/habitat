@@ -53,13 +53,22 @@ html {
   height: 100px;
   background-image: linear-gradient(to right, #29323c85, #48556376);
   color: black;
+
+}
+
+.header-logo {
+
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buttons {
 
   display: flex;
   text-align: center;
-  margin: 20%;
+  margin-top: 50%;
   text-align: center;
 }
 
@@ -73,6 +82,7 @@ html {
   margin: 20px;
   height: 55px;
   text-align:center;
+  text-decoration: none;
   border: none;
   background-size: 300% 100%;
 
@@ -98,8 +108,8 @@ html {
 .btn-hover.color-8 {
 
   margin: auto auto;
-
   padding: 20px;
   background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+
 }

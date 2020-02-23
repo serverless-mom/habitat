@@ -1,7 +1,10 @@
+from __future__ import print_function
+from datetime import datetime
 import os
 import boto3
 import json
-from datetime import datetime
+import urllib
+
 
 
 dynamodb = boto3.resource('dynamodb')
@@ -24,11 +27,11 @@ def lambda_handler(event, context):
         print(delta.days)
         if delta.days > 1:
             nagCount += 1
-            message = "get back on Habit@ you jerk! your streak is in danger!"
-            response = sns.publish(
-                TargetArn='arn:aws:sns:us-east-1:524823921797:habitat-email:f1ecb6be-a8b1-4c17-a8db-02ae6aa2f07e',
-                Message=json.dumps({'default': json.dumps(message)}),
-                MessageStructure='json'
+            message = "get back on Habit@ in the next two hours! your "+ str(user['streakLength'])+" day streak is in danger!"
+            sns.publish(
+                TopicArn='arn:aws:sns:us-east-1:524823921797:habitat-email',
+                Subject='Your Streak is in danger!',
+                Message=message
             )
 
     response = {
@@ -37,3 +40,6 @@ def lambda_handler(event, context):
     }
 
     return response
+
+
+

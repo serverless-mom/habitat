@@ -10,8 +10,7 @@ class Feedback extends Component {
     return(
 
             <div className='success'>
-                <h1>YOU DID THE THING!</h1>
-                    <p>{this.props.streak + ` times!`}</p>
+                    <p className="streak">You did it {`${this.props.streak}`} times!</p>
             </div>
     )
 }

@@ -40,7 +40,7 @@
 }
 
 html {
-  background-image: linear-gradient(to left, #2b58765c, #4e437648);
+  background-image: linear-gradient(to left, #8ba5b75c, #928ca748);
 
 }
 
@@ -53,7 +53,7 @@ html {
 .header {
 
   height: 80px;
-  /* background-image: linear-gradient(to right, #29323c30, #4855632c); */
+  background-image: linear-gradient(to right, #29323c30, #4855632c);
   box-shadow: 0 1px 5px rgba(0,0,0,0.34);
 }
 
@@ -73,6 +73,7 @@ html {
   text-align: center;
   margin-top: 40%;
   text-align: center;
+  z-index: 1;
 }
 /* 
 
@@ -129,8 +130,10 @@ html {
 
 .btn-img:hover {
   
-  -webkit-filter: drop-shadow(5px 5px 5px #b8b8b8);
-  filter: drop-shadow(5px 5px 5px #d0cece );
+  -webkit-filter: drop-shadow(5px 5px 5px #f15b5b);
+  filter: drop-shadow(5px 5px 5px #b32929 );
+  position: absolute;
+  z-index: 7;
 
 }
 

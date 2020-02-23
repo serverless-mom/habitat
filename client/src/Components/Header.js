@@ -9,7 +9,7 @@ class Header extends Component {
 
             <header className="header">
                 {/* <div>THIS IS THE HEADER</div> */}
-                   <img src="../../img/habitat-name.png" className="header-logo"></img> 
+                   <img src="../../img/habitat-name.png" className="header-logo" alt=""></img> 
             </header>
         )
     }

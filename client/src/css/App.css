@@ -1,4 +1,4 @@
-@import "normalize.css"; /* bring in normalize.css styles */
+/* @import "normalize.css"; bring in normalize.css styles */
 
 .App {
   text-align: center;
@@ -73,6 +73,7 @@ html {
   margin-top: 50%;
   text-align: center;
 }
+/* 
 
 .btn-hover {
 
@@ -82,14 +83,13 @@ html {
   color: #fff;
   cursor: pointer;
   margin: 20px;
-  height: 55px;
+  height: 200px;
   text-align:center;
   text-decoration: none;
   border: none;
   background-size: 300% 100%;
 
-  border-radius: 50px;
-  /* moz-transition: all .4s ease-in-out; */
+  border-radius: 100px;
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -97,7 +97,6 @@ html {
 
 .btn-hover:hover {
   background-position: 100% 0;
-  /* moz-transition: all .4s ease-in-out; */
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -114,4 +113,16 @@ html {
   background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 
+  
+} */
+
+.btn-img {
+
+  background-size: contain;
+  margin-left: 150px;
+  visibility: visible;
+  width: 500px;
+  height: 500px;
+  -webkit-filter: drop-shadow(5px 5px 5px #b8b8b8);
+  filter: drop-shadow(5px 5px 5px #b8b8b8 );
 }
